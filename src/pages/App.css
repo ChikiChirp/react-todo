@@ -1,0 +1,220 @@
+#root {
+  width: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ebfdfc;
+  color: #022244;
+  text-align: center;
+}
+
+/* Header */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #d4edda;
+  color: #3a98b9;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 15px 0;
+
+  border-bottom: 2px solid #ddd;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 700;
+  margin: 10px 20px;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 90px;
+  left: 0;
+  background-color: #007bff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 15px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+/*About*/
+.about-container {
+  margin: 20px;
+}
+
+/* Todo */
+.todo-input {
+  background: #fbfbfb;
+  color: #022244;
+  padding: 10px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #febf63;
+}
+
+.add-btn {
+  margin: 10px;
+  background-color: #fa8500;
+  border-style: solid;
+  border-color: #de7300;
+  border-width: 3px;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 170px;
+  height: 55px;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px 60px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #1c950f;
+}
+
+.complete-btn {
+  background-color: #ffbf00;
+  color: #022244;
+  border: none;
+  padding: 5px 10px;
+  margin: 7px;
+  cursor: pointer;
+  border-style: solid;
+  border-color: #007bff;
+  border-radius: 5px;
+}
+
+.complete-btn:hover {
+  background-color: #ffdb6e;
+}
+
+.completed .complete-btn {
+  background-color: #53e35a;
+}
+
+.completion-message {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  opacity: 0.7;
+  animation: confetti-fall 3s linear infinite;
+}
+
+.confetti:nth-child(odd) {
+  background-color: yellow;
+}
+.confetti:nth-child(even) {
+  background-color: blue;
+}
+.confetti:nth-child(3n) {
+  background-color: green;
+}
+.confetti:nth-child(4n) {
+  background-color: orange;
+}
+.confetti:nth-child(5n) {
+  background-color: purple;
+}
+
+/* Animation för att falla */
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.confetti:nth-child(1) {
+  left: 10%;
+  animation-duration: 7s;
+}
+.confetti:nth-child(2) {
+  left: 20%;
+  animation-duration: 7s;
+}
+.confetti:nth-child(3) {
+  left: 30%;
+  animation-duration: 5s;
+}
+.confetti:nth-child(4) {
+  left: 40%;
+  animation-duration: 4.5s;
+}
+.confetti:nth-child(5) {
+  left: 50%;
+  animation-duration: 5.1s;
+}
+.confetti:nth-child(6) {
+  left: 60%;
+  animation-duration: 5.9s;
+}
+.confetti:nth-child(7) {
+  left: 70%;
+  animation-duration: 3.3s;
+}
+.confetti:nth-child(8) {
+  left: 80%;
+  animation-duration: 3.4s;
+}
+.confetti:nth-child(9) {
+  left: 90%;
+  animation-duration: 3s;
+}
